@@ -1,6 +1,5 @@
 package com.example.demo;
 
-
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -9,7 +8,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 public class HomeController {
     @GetMapping("/")
     public String index(){
-        System.out.println("====서버가 시작됨====");
+        System.out.println("===== 서버가 시작됨 =====");
         return "index";
     }
     @GetMapping("/forms/{dir}/{fname}")
@@ -18,6 +17,5 @@ public class HomeController {
         System.out.println("이동하려는 디렉토리: "+dir);
         System.out.println("이동하려는 파일명: "+fname);
         return String.format("%s/%s", dir, fname);
-
     }
 }
